@@ -1,0 +1,470 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+$greenBtn: #05C489
+
+$violet: #2F2F6C
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif
+$font-suisse-reg: SuisseIntl-Regular, sans-serif //
+$font-suisse-med: SuisseIntl-Medium, sans-serif //
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif
+$font-wulkan: WulkanDisplay, sans-serif
+$cooper-font: Cooper-Blk-BT, sans-serif
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  color: $grey
+  height: 100%
+  background: $violet
+
+  img
+    max-width: 100%
+    height: auto
+
+.wrapper
+  overflow: hidden
+/*****************************AUTO HEAD***************************/
+.auto
+  padding: 10px 0 170px 0
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+    background: url('../img/bg-head-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
+    background: url('../img/bg-head-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-head-mob.jpg") no-repeat 50% 0/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: url("../img/bg-head-mob.jpg") no-repeat 50% 0/cover
+
+  &__container
+    max-width: 1110px
+    padding: 0 15px
+    margin: 0 auto
+  &__logo
+    max-width: 485px
+    margin: 0 auto -40px auto
+  &__image
+    max-width: 1010px
+  &__info
+    display: flex
+    align-items: center
+  &__text
+    font-family: $cooper-font
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: $blue
+    letter-spacing: -1px
+    font-size: 29px
+    line-height: 38px
+    text-transform: uppercase
+    color: $grey
+    margin: 0 15px 0 0
+  &__progress
+    margin: 0 18px 0 0
+    width: 620px
+    height: 35px
+    background: #BEE6D3
+    border: 2px solid #2C7450
+    box-shadow: 0 0 19px #58C08D
+    transform: skewX(-30deg)
+    border-radius: 6px
+    .myProgress
+      border-radius: 6px
+      background: #05C489
+      height: 100%
+      width: 44%
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 10px
+        background: #0BF2AB
+        left: 0
+        top: 0
+        border-radius: 6px 6px 6px 0
+      .percetn
+        position: absolute
+        right: -43px
+        top: 50%
+        transform: translateY(-63%) skewX(30deg)
+        font-family: $cooper-font
+        letter-spacing: -1px
+        color: $blue
+        font-size: 29px
+        line-height: 38px
+        -webkit-text-stroke-width: 2px
+        -webkit-text-stroke-color: $grey
+        background: url("../img/percent.svg") no-repeat 50% 0/contain
+        width: 112px
+        height: 80px
+        padding: 28px 35px 7px 10px
+  &__link
+    display: inline-block
+    width: 288px
+    height: 100px
+    position: relative
+    transition: transform .3s ease
+    z-index: 2
+    &::after
+      content: ''
+      position: absolute
+      width: 305px
+      height: 109px
+      top: 0
+      left: 0
+      background: url(../img/btn-bottom.svg) no-repeat 50% 0/contain
+      z-index: -3
+      transition: .3s ease , background .3s ease
+    &::before
+      content: 'Долучитись'
+      padding: 24px 46px
+      font-family: $cooper-font
+      font-size: 26px
+      line-height: 34px
+      letter-spacing: -1.8px
+      text-transform: uppercase
+      color: #FFD300
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      position: absolute
+      top: 0
+      left: 0
+      background: url(../img/btn-top.svg) no-repeat 50% 0/contain
+      z-index: -2
+      transition: .3s ease
+  &__button:hover .auto__link::before
+    top: 5px
+    left: 5px
+  &__button:hover .auto__link::after
+    background: url(../img/btn-active.svg) no-repeat 50% 0/contain
+    top: 5px
+    left: 4px
+    width: 301px
+    height: 105px
+  &__left
+    position: absolute
+    left: 50px
+    top: 50%
+    transform: translateY(-50%)
+    &-done
+      width: 128px
+      height: 58px
+      background: url("../img/min-car-1.png") no-repeat 50% 0/contain
+      margin: 0 0 17px 0
+    &-load
+      width: 113px
+      height: 58px
+      background: url("../img/min-car-2.png") no-repeat 50% 0/contain
+      position: relative
+      margin: 0 0 17px 0
+      img
+        position: absolute
+        top: 5px
+        right: 2px
+        transform-origin: top left
+        animation: key 1.5s infinite
+    &-none
+      width: 92px
+      height: 62px
+      background: url("../img/min-car-3.png") no-repeat 50% 0/contain
+      margin: 0 0 17px 0
+  &__right
+    position: absolute
+    right: 50px
+    top: 50%
+    transform: translateY(-50%)
+    &-none
+      width: 92px
+      height: 62px
+      background: url("../img/min-car-3.png") no-repeat 50% 0/contain
+      margin: 0 0 17px 0
+
+/*****************************GAME***************************/
+.game
+  padding: 244px 0 22px 0
+  margin-top: -90px
+  position: relative
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+    background: url('../img/bg-game-desc.svg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
+    background: url('../img/bg-game-desc.svg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-game-desc.svg") no-repeat 50% 0/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: url("../img/bg-game-desc.svg") no-repeat 50% 0/cover
+  &__arrow
+    max-width: 103px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: -60px
+    z-index: 5
+    img
+      animation: arrow 1.5s infinite
+  &__container
+    max-width: 1310px
+    padding: 0 15px
+    margin: 0 auto
+  &__title
+    font-family: $cooper-font
+    font-size: 96px
+    line-height: 111px
+    text-align: center
+    color: $grey
+    letter-spacing: -1px
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: $blue
+    text-shadow: 5px 4px 0px $magenta, 8px 11px 0px $blue
+    margin: 0 0 70px 0
+  &__text
+    font-family: $font-suisse-med
+    font-size: 32px
+    line-height: 46px
+    color: $blue
+    max-width: 844px
+    text-align: center
+    margin: 0 auto 70px auto
+  &__info
+    margin: 0 0 50px 0
+    &-text
+      position: relative
+      z-index: 2
+      width: 870px
+      height: 525px
+      margin: 0 auto
+      padding: 70px 80px
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+        background: url('../img/plush-desc.svg') no-repeat 50% 0/contain
+      @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
+        background: url('../img/plush-tab.svg') no-repeat 50% 0/contain
+      @media screen and (max-width: 600px) and (orientation: portrait)
+        background: url("../img/plush-mob.svg") no-repeat 50% 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/plush-mob.svg") no-repeat 50% 0/contain
+      p
+        font-size: 20px
+        line-height: 36px
+        font-family: $font-suisse-reg
+        color: $blue
+        max-width: 704px
+        &:not(:last-child)
+          margin: 0 0 15px 0
+    &-img
+      display: flex
+      justify-content: center
+      margin-top: -29px
+      position: relative
+      z-index: 1
+    &-arrow
+      display: flex
+      justify-content: center
+      margin-top: -19px
+      img
+        animation: arrow 1.5s infinite
+  &__sub-title
+    font-family: $cooper-font
+    font-size: 64px
+    line-height: 84px
+    text-align: center
+    color: $grey
+    letter-spacing: -1px
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: $blue
+    text-shadow: 5px 4px 0px $magenta, 8px 11px 0px $blue
+    margin: 0 0 60px 0
+  &__row
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 0 0 10px 0
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-width: 282px
+    max-width: 321px
+    margin: 0 20px 20px 0
+    &-img
+      margin: 0 0 30px 0
+    &-text
+      font-family: $cooper-font
+      font-size: 20px
+      line-height: 36px
+      color: $grey
+      letter-spacing: -1px
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      text-transform: uppercase
+      max-width: 318px
+      text-align: center
+  &__link
+    display: inline-block
+    width: 412px
+    height: 100px
+    position: relative
+    transition: transform .3s ease
+    z-index: 2
+    &::after
+      content: ''
+      position: absolute
+      width: 362px
+      height: 114px
+      top: 0
+      left: 0
+      background: url(../img/btn-bottom-2.svg) no-repeat 50% 0/contain
+      z-index: -3
+      transition: .3s ease , background .3s ease
+    &::before
+      content: 'Роби депозит'
+      padding: 24px 64px
+      font-family: $cooper-font
+      font-size: 26px
+      line-height: 34px
+      letter-spacing: -1.8px
+      text-transform: uppercase
+      color: #FFD300
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      position: absolute
+      top: 0
+      left: -1px
+      background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
+      z-index: -2
+      transition: .3s ease
+  &__button:hover .game__link::before
+    top: 2px
+    left: 2px
+  &__button:hover .game__link::after
+    background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+    top: 2px
+    left: 2px
+    width: 360px
+    height: 118px
+    //transform-origin: bottom right
+    //transform: scaleX(0.98) scaleY(0.95)
+  &__button
+    margin: 0 auto
+    max-width: 400px
+
+
+
+
+
+
+
+
+//
+//.help__garage-progress
+//    .myProgress
+//        .percetn 44%
+//        .arrow-right
+//            span
+//            span
+//            span
+
+//.help
+//  &__garage
+//    &-progress
+//      position: absolute
+//      top: 75px
+//      left: 50%
+//      transform: translateX(-50%) skewX(-30deg)
+//      height: 30px
+//      width: 565px
+//      background: rgba(255, 38, 126, 0.4)
+//      border: 1px solid #FF267E
+//      //box-shadow: 0px 0px 14px #FF267E
+//      border-radius: 6px
+//      animation: shadow 1.5s infinite
+//      //overflow: hidden
+//      .myProgress
+//        border-radius: 6px
+//        background: #FFD300
+//        height: 100%
+//        width: 44%
+//        position: relative
+//        .percetn
+//          position: absolute
+//          right: -10px
+//          top: 50%
+//          transform: translateY(-50%) skewX(30deg)
+//          font-family: $yaro-font
+//          font-weight: 400
+//          color: #EDEDED
+//          font-size: 24px
+//          line-height: 24px
+//          -webkit-text-stroke-width: 2px
+//          -webkit-text-stroke-color: $blue
+//          padding: 12px 11px 7px
+//          background: #FFD300
+//          border: 3px solid $blue
+//          border-radius: 13px
+//        .arrow-right
+//          position: absolute
+//          top: 50%
+//          transform: translateY(-50%) skewX(30deg) scale(-1)
+//          right: -59px
+//          span
+//            display: block
+//            width: 13px
+//            height: 13px
+//            border-bottom: 4px solid $magenta
+//            border-left: 4px solid $magenta
+//            margin: 0
+//            animation: arrow-left 1.5s infinite
+//            float: left
+//            &:nth-child(2)
+//              animation-delay: -0.1s
+//            &:nth-child(3)
+//              animation-delay: -0.2s
+
+
+
+
+@keyframes arrow-left
+  0%
+    opacity: 0
+    transform: rotate(45deg) translate(-0px,-0px)
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+    transform: rotate(45deg) translate(0px,0px)
+
+@keyframes shadow
+  0%
+    box-shadow: 0 0 14px #FF267E
+  50%
+    box-shadow: 0 0 19px #FF267E
+  100%
+    box-shadow: 0 0 14px #FF267E
+
+@keyframes key
+  0%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(-10deg)
+  100%
+    transform: rotate(0deg)
+
+@keyframes arrow
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(10px)
+  100%
+    transform: translateY(0)
+
+
+
+
+
+
+

@@ -1,0 +1,250 @@
+@media screen and (max-width: 1112px)
+  .auto
+    &__container
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__logo
+      max-width: 400px
+    &__image
+        max-width: 604px
+        margin: 0 auto
+    &__left
+      transform: translateY(-120%)
+      &-done
+        max-width: 93px
+        margin: 0 0 10px 0
+      &-load
+        max-width: 75px
+        margin: 0 0 10px 0
+        img
+          max-width: 60px
+      &-none
+        width: 76px
+        height: 46px
+        margin: 0 0 20px 0
+    &__right
+      transform: translateY(-120%)
+      &-none
+        width: 76px
+        height: 46px
+        margin: 0 0 20px 0
+    &__info
+      position: relative
+      flex-wrap: nowrap
+      justify-content: center
+      margin-top: -39px
+    &__text
+      position: absolute
+      left: 19px
+      top: -20px
+    &__button
+      transform: scale(0.9)
+  .game
+    padding: 185px 0 22px 0
+    &__title
+      font-size: 76px
+      line-height: 101px
+    &__info
+      &-text
+        padding: 42px 67px
+        width: auto
+        p
+          max-width: 471px
+
+@media screen and (max-width: 963px)
+  .auto
+    &__info
+      transform-origin: center
+      transform: scale(0.9)
+
+@media screen and (max-width: 873px)
+  .auto
+    &__info
+      transform-origin: center
+      transform: scale(0.8)
+
+@media screen and (max-width: 778px)
+  .auto
+    padding: 10px 0 126px 0
+    &__info
+      transform-origin: center
+      transform: scale(0.7)
+      margin-top: -90px
+    &__right
+      transform-origin: right center
+      transform: translateY(-120%) scale(0.85)
+    &__left
+      transform-origin: left center
+      transform: translateY(-120%) scale(0.85)
+  .game
+    padding: 150px 0 22px 0
+    &__arrow
+      max-width: 61px
+      top: -35px
+    &__title
+      font-size: 64px
+      line-height: 84px
+      margin-bottom: 37px
+    &__text
+      font-size: 32px
+      line-height: 46px
+      max-width: 620px
+      margin-bottom: 50px
+    &__info
+      margin: 0 0 30px 0
+      &-arrow
+        img
+          max-width: 62px
+    &__sub-title
+      font-size: 48px
+      line-height: 63px
+      margin: 0 0 35px 0
+      text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
+    &__row
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+      max-width: 650px
+      margin: 0 auto 70px auto
+    &__item
+      margin: 0
+      &-img
+        margin: 0 0 10px 0
+        img
+          max-width: 200px
+      &-text
+        font-size: 20px
+        line-height: 36px
+
+
+@media screen and (max-width: 700px)
+  .auto
+    &__right
+      display: none
+    &__left
+      display: none
+    &__info
+      transform-origin: center
+      transform: scale(0.6)
+
+@media screen and (max-width: 660px)
+  .game
+    padding: 118px 0 22px 0
+    &__title
+      font-size: 54px
+      line-height: 74px
+    &__info-text
+      padding: 26px 67px
+      p
+        font-size: 18px
+        line-height: 33px
+
+@media screen and (max-width: 600px)
+  .auto
+    &__logo
+      margin: 0 0 -30px 0
+    &__info
+      flex-direction: column
+      align-items: center
+      margin-top: 14px
+      transform: scale(1)
+      width: 100%
+      padding: 0 15px
+    &__progress
+      margin: 0
+      width: 100%
+      height: 20px
+      .myProgress
+        .percetn
+          font-size: 14px
+          line-height: 18px
+          width: 62px
+          height: 44px
+          padding: 17px 45px 7px 8px
+          -webkit-text-stroke-width: 1px
+    &__button
+      transform: scale(0.7)
+    &__text
+      font-size: 15px
+      line-height: 20px
+      left: 31px
+      top: -28px
+      -webkit-text-stroke-width: 1.5px
+  .game
+    position: relative
+    padding: 118px 0 49px 0
+    &__title
+      font-size: 34px
+      line-height: 48px
+      margin: 0 0 30px 0
+      text-shadow: 2px 3px 0px $magenta, 3px 6px 0px $blue
+    &__text
+      font-size: 24px
+      line-height: 36px
+    &__info
+      &-text
+        padding: 25px 0
+        p
+          font-size: 17px
+          line-height: 30px
+          max-width: 263px
+      &-img
+        img
+          max-width: 130%
+    &__sub-title
+      font-size: 34px
+      line-height: 45px
+      text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
+    &__row
+      gap: 30px
+      grid-template-rows: calc(50% - 55px) calc(50% - 55px)
+      grid-template-columns: calc(50% - 15px) calc(50% - 15px)
+      align-items: start
+      justify-items: center
+    &__item
+      display: flex
+      flex-direction: column
+
+      &-img
+        margin: 0 0 13px 0
+        max-width: 100%
+        flex: 1 1 auto
+        img
+          max-width: 150px
+      &-text
+        font-size: 15px
+        line-height: 26px
+        -webkit-text-stroke-width: 1.5px
+        max-width: 145px
+    &__button
+      position: absolute
+      left: 50%
+      bottom: 0
+      z-index: 6
+      transform: scale(0.6) translateX(-80%)
+      transform-origin: center
+      margin: auto
+
+@media screen and (max-width: 360px)
+  .game
+    &__title
+      font-size: 31px
+      line-height: 45px
+    &__info
+      &-text
+        p
+          font-size: 15px
+          line-height: 29px
+    &__item
+      &-img
+        img
+          max-width: 134px
+      &-text
+        font-size: 14px
+        line-height: 23px
+
+
+
+
+

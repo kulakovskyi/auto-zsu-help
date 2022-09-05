@@ -1,0 +1,72 @@
+.wrapper
+    section.auto
+        .auto__container
+            .auto__logo
+                img(src='img/logo.svg' alt="logo")
+            .auto__image
+                picture
+                    source(media="(max-width: 600px) and (orientation: portrait)" srcset="img/car-head-mob.png")
+                    source(media="(max-width: 920px) and (orientation: landscape) and (max-height: 450px)" srcset="img/car-head-mob.png")
+                    source(media="(min-width: 601px) and (max-width: 1112px) and (orientation: portrait)" srcset="img/car-head-desc.png")
+                    source(media="(min-width: 601px) and (orientation: landscape)" srcset="img/car-head-desc.png")
+                    img(src="img/bg.jpg" alt="Favbet")
+            .auto__info
+                .auto__text Іде збір
+                .auto__progress
+                    .myProgress
+                        .percetn 44%
+                .auto__button
+                    a(href='#' class='auto__link')
+            .auto__left
+                .auto__left-done
+                .auto__left-load
+                    img(src='img/min-key.svg' alt='key')
+                .auto__left-none
+                .auto__left-none
+                .auto__left-none
+            .auto__right
+                .auto__right-none
+                .auto__right-none
+                .auto__right-none
+                .auto__right-none
+                .auto__right-none
+
+    section.game
+        .game__container
+            .game__arrow
+                img(src='img/arrow-down.svg' alt='arrow')
+            h2.game__title Бути всередині #[br] гри — це не #[br] тільки про #[br] емоції, а й про #[br] відповідальність
+            p.game__text Це означає бути частиною ком'юніті, що в скрутний момент допомогає тим, хто цього потребує.
+            .game__info
+                .game__info-text
+                    p Щоб швидше наблизити нашу перемогу, Збройні сили України потребують автівок. Ми вирішили допомогти їм.
+                    p Разом з Favbet Foundation збираємо кошти та відраховуємо частину від кожного депозиту на закупівлю 10 машин для військових.
+                    p Наближай перемогу разом з нами. Переходь на сторінку Favbet Foundation та підтримай збір.
+                .game__info-img
+                    img(src='img/comp.svg' alt='comp')
+                .game__info-arrow
+                    img(src='img/arrow-down.svg' alt='arrow')
+            h3.game__sub-title Як це працює
+            ul.game__row
+                li.game__item
+                    .game__item-img
+                        img(src='img/icon-1.svg' alt='icon')
+                    p.game__item-text Заходь на сайт
+                li.game__item
+                    .game__item-img
+                        img(src='img/icon-2.svg' alt='icon')
+                    p.game__item-text Реєструйся
+                li.game__item
+                    .game__item-img
+                        img(src='img/icon-3.svg' alt='icon')
+                    p.game__item-text Роби мінімальний депозит
+                li.game__item
+                    .game__item-img
+                        img(src='img/icon-4.svg' alt='icon')
+                    p.game__item-text Частина від кожного депозиту передається на покупку тачок
+            .game__button
+                a(href='#' class='game__link')
+
+
+
+
