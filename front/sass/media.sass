@@ -1,3 +1,9 @@
+@media screen and (min-width: 2050px)
+  .line-1
+    margin-top: -105px
+  .buy
+    padding: 86px 0 0 0
+
 @media screen and (max-width: 1112px)
   .auto
     &__container
@@ -41,7 +47,7 @@
     &__button
       transform: scale(0.9)
   .game
-    padding: 185px 0 22px 0
+    padding: 185px 0 90px 0
     &__title
       font-size: 76px
       line-height: 101px
@@ -51,6 +57,17 @@
         width: auto
         p
           max-width: 471px
+  .line-1
+    height: 107px
+  .buy
+    &__info
+      transform: scale(0.8)
+    &__row
+      margin-top: -30px
+    &__item
+      &-load
+        width: 95px
+
 
 @media screen and (max-width: 963px)
   .auto
@@ -63,6 +80,20 @@
     &__info
       transform-origin: center
       transform: scale(0.8)
+  .buy
+    &__row
+      margin: -30px 0 75px 0
+    &__image
+      .border
+        width: 97%
+        height: 100%
+
+@media screen and (max-width: 817px)
+  .buy
+    &__image
+      .border
+        left: 36px
+        top: -21px
 
 @media screen and (max-width: 778px)
   .auto
@@ -78,7 +109,7 @@
       transform-origin: left center
       transform: translateY(-70%) scale(0.85)
   .game
-    padding: 150px 0 22px 0
+    padding: 150px 0 98px 0
     &__arrow
       max-width: 61px
       top: -35px
@@ -116,6 +147,34 @@
       &-text
         font-size: 20px
         line-height: 36px
+  .buy
+    padding: 12px 0 0 0
+
+    &__info
+      transform: scale(0.6)
+    &__image
+      &-wrap
+        max-width: 560px
+        .border
+          left: 27px
+          top: -11px
+    &__row
+      margin: -53px 0 75px 0
+    &__item
+      &-done
+        width: 66px
+        height: 30px
+        margin: 0 10px 0 0
+      &-load
+        width: 55px
+        height: 30px
+        margin: 0 10px 0 0
+      &-none
+        width: 55px
+        height: 30px
+        margin: 0 10px 0 0
+
+
 
 
 @media screen and (max-width: 700px)
@@ -130,7 +189,7 @@
 
 @media screen and (max-width: 660px)
   .game
-    padding: 118px 0 22px 0
+    padding: 118px 0 84px 0
     &__title
       font-size: 54px
       line-height: 74px
@@ -173,7 +232,7 @@
       -webkit-text-stroke-width: 1.5px
   .game
     position: relative
-    padding: 118px 0 49px 0
+    padding: 118px 0 101px 0
     &__title
       font-size: 34px
       line-height: 48px
@@ -220,11 +279,81 @@
     &__button
       position: absolute
       left: 50%
-      bottom: 0
+      bottom: 45px
       z-index: 6
       transform: scale(0.6) translateX(-80%)
       transform-origin: center
       margin: auto
+  .line-1
+    height: 75px
+    margin-top: -41px
+  .buy
+    padding: 87px 0 130px 0
+    position: relative
+    z-index: -1
+    &__image
+      &-wrap
+        .border
+          left: 16px
+          top: -7px
+    &__button
+      position: absolute
+      left: 50%
+      bottom: 45px
+      z-index: 6
+      transform: scale(0.6) translateX(-80%)
+      transform-origin: center
+      margin: auto
+    &__info
+      transform: scale(1)
+      margin-left: -15px
+      &-wrap
+        flex: 1 1 auto
+      &-percent
+        font-size: 24px
+        line-height: 32px
+        -webkit-text-stroke-width: 1.5px
+        width: 95px
+        height: 95px
+        padding: 30px 20px 14px 25px
+      &-progress
+        width: 100%
+        height: 20px
+        margin: 0 0 6px 0
+        .arrow-right
+          transform-origin: left center
+          transform: translateY(-50%) skewX(30deg) scale(-0.6)
+          right: -68px
+      &-text
+        font-size: 15px
+        line-height: 20px
+        -webkit-text-stroke-width: 1.5px
+    &__row
+      margin: 0 0 40px 0
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      justify-items: center
+      gap: 0 13px
+    &__item
+      &-done,
+      &-load,
+      &-none
+        width: 100%
+        height: 60px
+        margin: 0
+      &-done
+        width: 132%
+
+@media screen and (max-width: 470px)
+  .buy
+    &__row
+      margin: 0 0 11px 0
+
+@media screen and (max-width: 415px)
+  .buy
+    &__row
+      margin: 0
+
 
 @media screen and (max-width: 360px)
   .game
@@ -244,7 +373,13 @@
         font-size: 14px
         line-height: 23px
 
-
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+  .buy
+    &__image
+      &-wrap
+        .border
+          left: 15px
+          top: -6px
 
 
 

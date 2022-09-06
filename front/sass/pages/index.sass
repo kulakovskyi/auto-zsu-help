@@ -11,7 +11,7 @@ $violet: #2F2F6C
 $font-suisse-bold: SuisseIntl-Bold, sans-serif
 $font-suisse-reg: SuisseIntl-Regular, sans-serif //
 $font-suisse-med: SuisseIntl-Medium, sans-serif //
-$font-suisse-semb: SuisseIntl-SemiBold, sans-serif
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //
 $font-wulkan: WulkanDisplay, sans-serif
 $cooper-font: Cooper-Blk-BT, sans-serif
 
@@ -20,7 +20,7 @@ body
   overscroll-behavior: none
   color: $grey
   height: 100%
-  background: $violet
+  background: #292929
 
   img
     max-width: 100%
@@ -186,7 +186,7 @@ body
 
 /*****************************GAME***************************/
 .game
-  padding: 244px 0 22px 0
+  padding: 244px 0 90px 0
   margin-top: -90px
   position: relative
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
@@ -357,76 +357,514 @@ body
     max-width: 400px
 
 
+/*****************************LINE***************************/
+
+.line-1
+  background: url("../img/line-1.svg") no-repeat 50% 0/cover
+  width: 100%
+  height: 190px
+  position: relative
+  z-index: 5
+  margin-top: -80px
+
+/*****************************BUY***************************/
+
+.buy
+  margin-top: -80px
+  padding: 40px 0 70px 0
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
+    background: url('../img/bg-buy-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
+    background: url('../img/bg-buy-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-buy-mob.jpg") no-repeat 50% 0/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: url("../img/bg-buy-mob.jpg") no-repeat 50% 0/cover
+
+  &__container
+    max-width: 1170px
+    padding: 0 15px
+    margin: 0 auto
+  &__info
+    display: flex
+    align-items: center
+    justify-content: center
+    &-percent
+      font-family: $cooper-font
+      color: #F8D548
+      font-size: 96px
+      line-height: 126px
+      -webkit-text-stroke-width: 5px
+      -webkit-text-stroke-color: $blue
+      letter-spacing: -2px
+      position: relative
+      display: inline-block
+      z-index: 2
+      background: url("../img/poly-buy.svg") no-repeat 50% 0/contain
+      width: 262px
+      height: 262px
+      padding: 53px 65px 65px 38px
+    &-progress
+      height: 38px
+      width: 612px
+      background: rgba(190, 230, 211, 0.66)
+      box-shadow: 0px 0px 19px #58C08D
+      border: 2px solid rgb(44, 116, 80)
+      transform: skewX(-30deg)
+      border-radius: 6px
+      margin: 0 0 13px 0
+      .myProgress
+        border-radius: 6px 0 0 6px
+        background: #05C489
+        height: 100%
+        width: 44%
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          width: 100%
+          height: 10px
+          background: #0BF2AB
+          left: 0
+          top: 0
+          border-radius: 6px 0 0 0
+      .arrow-right
+          position: absolute
+          top: 50%
+          transform: translateY(-50%) skewX(30deg) scale(-1)
+          right: -50px
+          span
+            display: block
+            width: 13px
+            height: 13px
+            border-bottom: 4px solid $grey
+            border-left: 4px solid $grey
+            margin: 0
+            animation: arrow-left 1.5s infinite
+            float: left
+            &:nth-child(2)
+              animation-delay: -0.1s
+            &:nth-child(3)
+              animation-delay: -0.2s
+    &-text
+      font-family: $cooper-font
+      color: $grey
+      font-size: 29px
+      line-height: 38px
+      text-transform: uppercase
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      letter-spacing: -1.5px
+  &__row
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 0 100px 0
+  &__item
+    &-done
+      width: 128px
+      height: 58px
+      background: url("../img/min-car-1.png") no-repeat 50% 0/contain
+      margin: 0 17px 0 0
+    &-load
+      width: 113px
+      height: 58px
+      background: url("../img/min-car-2.png") no-repeat 50% 0/contain
+      position: relative
+      margin: 0 17px 0 0
+      img
+        position: absolute
+        top: 5px
+        right: 2px
+        transform-origin: top left
+        animation: key 1.5s infinite
+    &-none
+      width: 92px
+      height: 62px
+      background: url("../img/min-car-3.png") no-repeat 50% 0/contain
+      margin: 0 17px 0 0
+      &:last-child
+        margin: 0
+  &__image
+    display: flex
+    justify-content: center
+    align-items: center
+    &-wrap
+      position: relative
+      .border
+        content: ''
+        position: absolute
+        width: 98%
+        height: 103%
+        background: url("../img/blick-car.svg") no-repeat 50% 0/cover
+        left: 40px
+        top: -21px
+        animation: auto-blick 1.5s infinite
+        &.sprint
+          animation: auto-blick 0.5s infinite
+
+
+  &__link
+    display: inline-block
+    width: 412px
+    height: 100px
+    position: relative
+    transition: transform .3s ease
+    z-index: 2
+    &::after
+      content: ''
+      position: absolute
+      width: 362px
+      height: 114px
+      top: 0
+      left: 0
+      background: url(../img/btn-bottom-2.svg) no-repeat 50% 0/contain
+      z-index: -3
+      transition: .3s ease , background .3s ease
+    &::before
+      content: 'Прокачати авто'
+      padding: 24px 46px
+      font-family: $cooper-font
+      font-size: 26px
+      line-height: 34px
+      letter-spacing: -1.8px
+      text-transform: uppercase
+      color: #FFD300
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      position: absolute
+      top: 0
+      left: -1px
+      background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
+      z-index: -2
+      transition: .3s ease
+  &__button:hover .buy__link::before
+    top: 2px
+    left: 2px
+  &__button:hover .buy__link::after
+    background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+    top: 2px
+    left: 2px
+    width: 360px
+    height: 118px
+
+  &__button
+    margin: 0 auto
+    max-width: 400px
+
+
+/*************YOUTUBE********/
+.youtube
+  background: url("../img/bg-footer.svg") no-repeat 50% 0/cover
+
+  margin-top: -90px
+  padding: 100px 0 30px 0
+  &__container
+    max-width: 1080px
+    padding: 0 15px
+    margin: 0 auto
+  &__title
+    font-family: $cooper-font
+    font-size: 64px
+    line-height: 84px
+    text-align: center
+    color: $grey
+    letter-spacing: -1px
+    -webkit-text-stroke-width: 2px
+    -webkit-text-stroke-color: $blue
+    text-shadow: 5px 4px 0px $magenta, 8px 11px 0px $blue
+    margin: 0 0 25px 0
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 0 40px 0
+    &-text
+      font-family: $cooper-font
+      font-size: 20px
+      line-height: 35px
+      color: $grey
+      -webkit-text-stroke-width: 2px
+      -webkit-text-stroke-color: $blue
+      letter-spacing: -1px
+      text-align: center
+      text-transform: uppercase
+      margin: 0 0 7px 0
+  &__foot
+    &-logo
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 0 25px 0
+    &-text
+      font-family: $font-suisse-reg
+      text-align: center
+      font-size: 15px
+      line-height: 35px
+      color: $blue
+      margin: 0 0 6px 0
+      &:nth-child(3)
+        margin: 0 0 12px 0
+    &-row
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 0 35px 0
+    &-item
+      position: relative
+
+      &-fav
+        width: 207px
+        height: 46.5px
+        background: url("../img/bottom-foot.svg") no-repeat 50% 0/contain
+        position: relative
+        top: 1px
+        left: 1px
+        margin: 0 10px 0 0
+        &::before
+          content: ''
+          position: absolute
+          top: -1.5px
+          left: 0px
+          width: 203px
+          height: 42px
+          background: url("../img/link-foot-1.svg") no-repeat 50% 0/contain
+          transition: .2s ease
+        &:hover::before
+          transform: translate(1.5px, 2px)
+      &-facebook
+        width: 50px
+        height: 48px
+        background: url("../img/bottom-foot-2.svg") no-repeat 50% 0/contain
+        margin: 0 10px 0 0
+        &::before
+          content: ''
+          position: absolute
+          top: -1.5px
+          left: 0px
+          width: 46px
+          height: 42px
+          background: url("../img/link-foot-f.svg") no-repeat 50% 0/contain
+          transition: .2s ease
+        &:hover::before
+          transform: translate(1.5px, 1.5px)
+      &-insta
+        width: 50px
+        height: 48px
+        background: url("../img/bottom-foot-2.svg") no-repeat 50% 0/contain
+        &::before
+          content: ''
+          position: absolute
+          top: -1.5px
+          left: 0px
+          width: 46px
+          height: 42px
+          background: url("../img/link-foot-i.svg") no-repeat 50% 0/contain
+          transition: .2s ease
+        &:hover::before
+          transform: translate(1.5px, 1.5px)
+
+    &-link
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 2
+    &-links
+      display: flex
+      align-items: center
+      justify-content: center
+      &-item
+        &:not(:last-child)
+          margin: 0 40px 0 0
+      &-goin
+        font-family: $font-suisse-reg
+        font-size: 13px
+        line-height: 35px
+        text-decoration-line: underline
+        color: $blue
+        &:hover
+          text-decoration-line: none
 
 
 
 
 
 
-//
-//.help__garage-progress
-//    .myProgress
-//        .percetn 44%
-//        .arrow-right
-//            span
-//            span
-//            span
 
-//.help
-//  &__garage
-//    &-progress
-//      position: absolute
-//      top: 75px
-//      left: 50%
-//      transform: translateX(-50%) skewX(-30deg)
-//      height: 30px
-//      width: 565px
-//      background: rgba(255, 38, 126, 0.4)
-//      border: 1px solid #FF267E
-//      //box-shadow: 0px 0px 14px #FF267E
-//      border-radius: 6px
-//      animation: shadow 1.5s infinite
-//      //overflow: hidden
-//      .myProgress
-//        border-radius: 6px
-//        background: #FFD300
-//        height: 100%
-//        width: 44%
-//        position: relative
-//        .percetn
-//          position: absolute
-//          right: -10px
-//          top: 50%
-//          transform: translateY(-50%) skewX(30deg)
-//          font-family: $yaro-font
-//          font-weight: 400
-//          color: #EDEDED
-//          font-size: 24px
-//          line-height: 24px
-//          -webkit-text-stroke-width: 2px
-//          -webkit-text-stroke-color: $blue
-//          padding: 12px 11px 7px
-//          background: #FFD300
-//          border: 3px solid $blue
-//          border-radius: 13px
-//        .arrow-right
-//          position: absolute
-//          top: 50%
-//          transform: translateY(-50%) skewX(30deg) scale(-1)
-//          right: -59px
-//          span
-//            display: block
-//            width: 13px
-//            height: 13px
-//            border-bottom: 4px solid $magenta
-//            border-left: 4px solid $magenta
-//            margin: 0
-//            animation: arrow-left 1.5s infinite
-//            float: left
-//            &:nth-child(2)
-//              animation-delay: -0.1s
-//            &:nth-child(3)
-//              animation-delay: -0.2s
+
+/*************SLIDER********/
+.auto
+  &__buy
+    position: relative
+    z-index: 2
+    height: 582px
+    width: 764px
+    background: url("../img/video-bottom.svg") no-repeat 50% 0/contain
+    margin: 0 auto 70px auto
+    &::before
+      content: ''
+      background: url("../img/video-top.svg") no-repeat 50% 0/contain
+      width: 755px
+      height: 565px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 10
+    &-info
+      width: 736px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      position: absolute
+      bottom: 33px
+      left: 30px
+      z-index: 11
+      .controls-play
+        margin: 0 30px 0 0
+        position: relative
+        width: 96px
+        height: 95px
+        z-index: 11
+        top: 2px
+        left: 2px
+        cursor: pointer
+        background: url("../img/play-bottom.svg") no-repeat 50% 0/contain
+        &::before
+          content: ''
+          position: absolute
+          top: -2px
+          left: -2px
+          width: 86px
+          height: 85px
+          z-index: 10
+          transition: .2s ease
+          background: url("../img/play-top.svg") no-repeat 50% 0/contain
+        &:hover:before
+          transform: translate(2px, 2px)
+      .controls-text
+        flex: 1 1 auto
+        font-family: $cooper-font
+        font-size: 24px
+        line-height: 32px
+        color: $grey
+        -webkit-text-stroke-width: 2px
+        -webkit-text-stroke-color: $blue
+        letter-spacing: -1px
+        span
+          font-family: $cooper-font
+          font-size: 24px
+          line-height: 32px
+          color: $grey
+          -webkit-text-stroke-width: 2px
+          -webkit-text-stroke-color: $blue
+          letter-spacing: -1px
+      .controls
+        &__link
+          display: inline-block
+          width: 403px
+          height: 100px
+          position: relative
+          transition: transform .3s ease
+          z-index: 2
+          &::after
+            content: ''
+            position: absolute
+            width: 339px
+            height: 114px
+            top: 0
+            left: 0
+            background: url(../img/btn-bottom-2.svg) no-repeat 50% 0/contain
+            z-index: -3
+            transition: .3s ease , background .3s ease
+          &::before
+            content: 'всі випуски'
+            padding: 24px 66px
+            font-family: $cooper-font
+            font-size: 26px
+            line-height: 34px
+            letter-spacing: -1.8px
+            text-transform: uppercase
+            color: #FFD300
+            -webkit-text-stroke-width: 2px
+            -webkit-text-stroke-color: $blue
+            position: absolute
+            top: 0
+            left: -1px
+            background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
+            z-index: -2
+            transition: .3s ease
+        &__button:hover .controls__link::before
+          top: 2px
+          left: 2px
+        &__button:hover .controls__link::after
+          background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+          top: 2px
+          left: 2px
+          width: 337px
+          height: 118px
+        &__button
+          margin: 0 auto
+          max-width: 400px
+
+    &-slider
+      padding: 20px 27px
+      height: 565px
+      &-item
+        width: 755px
+        margin: auto
+      .size
+        transform: scale(.8)
+      &-name
+        font-family: $font-suisse-reg
+        font-size: 26px
+        line-height: 26px
+        text-transform: uppercase
+        color: $grey
+        letter-spacing: 0.08em
+        text-align: center
+        margin-top: -22px
+    &-controls
+      display: flex
+      justify-content: space-between
+      width: 1000px
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translateX(-50%) translateY(-50%)
+      .controls-left,
+      .controls-right
+        width: 86px
+        height: 85px
+        position: relative
+        z-index: 11
+        top: 2px
+        left: 2px
+        cursor: pointer
+        background: url("../img/left-bottom.svg") no-repeat 50% 0/contain
+        &::before
+          content: ''
+          position: absolute
+          top: -2px
+          left: -2px
+          width: 76px
+          height: 75px
+          z-index: 10
+          transition: .2s ease
+      .controls-left
+        &::before
+          background: url("../img/left-top.svg") no-repeat 50% 0/contain
+      .controls-left:hover::before
+        transform: translate(2px, 2px)
+      .controls-right
+        &::before
+          background: url("../img/right-top.svg") no-repeat 50% 0/contain
+      .controls-right:hover::before
+        transform: translate(2px, 2px)
+      .arrow-disabled
+        cursor: default
+        pointer-events: none
 
 
 
@@ -465,6 +903,60 @@ body
   100%
     transform: translateY(0)
 
+@keyframes auto-blick
+  0%
+    background: url("../img/blick-car.svg") no-repeat 50% 0/cover
+  50%
+    background: url("../img/blick-car-2.svg") no-repeat 50% 0/cover
+  100%
+    background: url("../img/blick-car.svg") no-repeat 50% 0/cover
+
+.slider
+  &.not-enough-elems
+    .slider-wrapper
+      display: none
+
+  &:not(.not-enough-elems)
+    display: flex
+    justify-content: space-between
+    > *:not(.slider-wrapper)
+      display: none
+
+.slider-wrapper
+  width: 100%
+  position: relative
+  overflow-x: hidden
+  overflow-y: hidden
+  &.prev
+    .slider-inner
+      transform: translateX(33.3333333%)
+      transition: all .3s ease
+      -webkit-transition: transform .3s ease
+      -webkit-transition: -webkit-transform .3s ease
+
+  &.next
+    .slider-inner
+      transform: translateX(-33.3333333%)
+      transition: all .3s ease
+      -webkit-transition: transform .3s ease
+      -webkit-transition: -webkit-transform .3s ease
+
+.slider-inner
+  width: 300%
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  margin-left: -100%
+
+.slider-page
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex: 0 0 33.33333%
+  overflow-x: hidden
+  overflow-y: hidden
+  justify-content: space-between
+  transition: all .3s ease
 
 
 
