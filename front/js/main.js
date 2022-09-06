@@ -8,8 +8,13 @@ btn.onmouseout = function (e){
     image.classList.remove('sprint')
 }
 
-//slider
+
 // Slider
+
+let counterSlide = 1;
+let sliderCount = document.querySelector('.counter');
+
+
 let prizesLeftArrow = document.querySelector('.controls-left'),
     prizesRightArrow = document.querySelector('.controls-right');
 
@@ -99,11 +104,15 @@ function slider(id, itemSelector, leftArrow, rightArrow, autoplay, config) {
             rightArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex + 1)
                 // obj.next()
+                counterSlide++
+                sliderCount.innerHTML = counterSlide;
             })
 
             leftArrow.addEventListener('click', () => {
                 toggleIndex(activeIndIndex - 1)
                 // obj.prev()
+                counterSlide--
+                sliderCount.innerHTML = counterSlide;
             })
 
             window.removeEventListener('resize', onResize);

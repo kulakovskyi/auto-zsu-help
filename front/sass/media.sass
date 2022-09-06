@@ -60,6 +60,7 @@
   .line-1
     height: 107px
   .buy
+    padding: 40px 0 90px 0
     &__info
       transform: scale(0.8)
     &__row
@@ -67,6 +68,19 @@
     &__item
       &-load
         width: 95px
+  .youtube
+    margin-top: -58px
+
+@media screen and (max-width: 1042px)
+  .auto
+    &__buy
+      margin: 0 auto 168px auto
+      &-controls
+        width: 200px
+        top: auto
+        transform: translateY(0) translateX(-50%)
+        bottom: -110px
+
 
 
 @media screen and (max-width: 963px)
@@ -94,6 +108,24 @@
       .border
         left: 36px
         top: -21px
+  .auto
+    &__buy
+      position: absolute
+      left: 50%
+      transform: scale(0.8) translateX(-62%)
+      margin: -70px auto 92px auto
+      &-controls
+        transform: translateY(0) translateX(-50%) scale(1.2)
+  .youtube
+    &__foot
+      margin-top: 662px
+      &-text
+        max-width: 480px
+        margin-right: auto
+        margin-left: auto
+        &:nth-child(3)
+          margin-right: auto
+          margin-left: auto
 
 @media screen and (max-width: 778px)
   .auto
@@ -148,8 +180,7 @@
         font-size: 20px
         line-height: 36px
   .buy
-    padding: 12px 0 0 0
-
+    padding: 12px 0 81px 0
     &__info
       transform: scale(0.6)
     &__image
@@ -173,6 +204,12 @@
         width: 55px
         height: 30px
         margin: 0 10px 0 0
+  .youtube
+    &__title
+      font-size: 48px
+      line-height: 63px
+      margin: 0 0 28px 0
+      text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
 
 
 
@@ -198,6 +235,17 @@
       p
         font-size: 18px
         line-height: 33px
+  .auto
+    &__buy
+      position: absolute
+      left: 50%
+      transform: scale(0.6) translateX(-83%)
+      margin: -136px auto 92px auto
+      &-controls
+        transform: translateY(0) translateX(-50%) scale(1.2)
+  .youtube
+    &__foot
+      margin-top: 499px
 
 @media screen and (max-width: 600px)
   .auto
@@ -343,6 +391,9 @@
         margin: 0
       &-done
         width: 132%
+  .youtube
+    margin-top: -39px
+    padding: 66px 0 35px 0
 
 @media screen and (max-width: 470px)
   .buy
