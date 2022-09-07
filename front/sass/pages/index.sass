@@ -32,6 +32,7 @@ body
 .auto
   padding: 10px 0 170px 0
   position: relative
+  background: url('../img/bg-head-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
     background: url('../img/bg-head-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
@@ -189,6 +190,7 @@ body
   padding: 244px 0 90px 0
   margin-top: -90px
   position: relative
+  background: url('../img/bg-game-desc.svg') no-repeat 50% 0/cover
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
     background: url('../img/bg-game-desc.svg') no-repeat 50% 0/cover
   @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
@@ -210,6 +212,8 @@ body
     max-width: 1310px
     padding: 0 15px
     margin: 0 auto
+    display: flex
+    flex-direction: column
   &__title
     font-family: $cooper-font
     font-size: 96px
@@ -241,6 +245,7 @@ body
       display: flex
       flex-direction: column
       align-items: center
+      background: url('../img/plush-desc.svg') no-repeat 50% 0/contain
       @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
         background: url('../img/plush-desc.svg') no-repeat 50% 0/contain
       @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
@@ -309,7 +314,7 @@ body
       text-align: center
   &__link
     display: inline-block
-    width: 412px
+    width: 343px
     height: 100px
     position: relative
     transition: transform .3s ease
@@ -327,6 +332,7 @@ body
     &::before
       content: 'Роби депозит'
       padding: 24px 64px
+      white-space: nowrap
       font-family: $cooper-font
       font-size: 26px
       line-height: 34px
@@ -354,7 +360,9 @@ body
     //transform: scaleX(0.98) scaleY(0.95)
   &__button
     margin: 0 auto
-    max-width: 400px
+    display: inline-block
+    align-self: center
+    //max-width: 400px
 
 
 /*****************************LINE***************************/
@@ -372,6 +380,7 @@ body
 .buy
   margin-top: -80px
   padding: 40px 0 70px 0
+  background: url('../img/bg-buy-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
     background: url('../img/bg-buy-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 601px) and (max-width: 1112px) and (orientation: portrait)
@@ -385,6 +394,8 @@ body
     max-width: 1170px
     padding: 0 15px
     margin: 0 auto
+    display: flex
+    flex-direction: column
   &__info
     display: flex
     align-items: center
@@ -506,7 +517,7 @@ body
 
   &__link
     display: inline-block
-    width: 412px
+    width: 341px
     height: 100px
     position: relative
     transition: transform .3s ease
@@ -523,6 +534,7 @@ body
       transition: .3s ease , background .3s ease
     &::before
       content: 'Прокачати авто'
+      white-space: nowrap
       padding: 24px 46px
       font-family: $cooper-font
       font-size: 26px
@@ -550,7 +562,9 @@ body
 
   &__button
     margin: 0 auto
-    max-width: 400px
+    display: inline-block
+    align-self: center
+    //max-width: 400px
 
 
 /*************YOUTUBE********/
@@ -708,7 +722,7 @@ body
       left: 0
       z-index: 10
     &-info
-      width: 736px
+      width: 677px
       display: flex
       justify-content: space-between
       align-items: center
@@ -758,7 +772,7 @@ body
       .controls
         &__link
           display: inline-block
-          width: 403px
+          width: 324px
           height: 100px
           position: relative
           transition: transform .3s ease
@@ -775,6 +789,7 @@ body
             transition: .3s ease , background .3s ease
           &::before
             content: 'всі випуски'
+            white-space: nowrap
             padding: 22px 66px
             font-family: $cooper-font
             font-size: 26px

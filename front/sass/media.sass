@@ -2,7 +2,9 @@
   .line-1
     margin-top: -105px
   .buy
-    padding: 86px 0 0 0
+    padding: 86px 0 81px 0
+  .youtube
+    padding: 170px 0 30px 0
 
 @media screen and (max-width: 1112px)
   .auto
@@ -281,6 +283,8 @@
   .game
     position: relative
     padding: 118px 0 101px 0
+    &__container
+      display: block
     &__title
       font-size: 34px
       line-height: 48px
@@ -393,7 +397,46 @@
         width: 132%
   .youtube
     margin-top: -39px
-    padding: 66px 0 35px 0
+    padding: 52px 0 35px 0
+    &__title
+      font-size: 34px
+      line-height: 45px
+      text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
+      max-width: 371px
+      margin: 0 auto 13px auto
+    &__info
+      &-text
+        font-size: 15px
+        line-height: 35px
+    &__foot-links-item:not(:last-child)
+      margin: 0 28px 0 0
+
+
+@media screen and (max-width: 500px)
+  .auto
+    &__buy
+      margin: -168px auto 121px auto
+      transform: scale(0.46) translateX(-109%)
+      &-controls
+        bottom: -135px
+      &-info
+        .controls__button
+          position: absolute
+          bottom: -360px
+          left: 50%
+          transform: translateX(-50%) scale(1.55)
+        .controls-text
+          flex: 0 1 auto
+          transform: scale(1.95)
+          position: relative
+          right: 69px
+        .controls-play
+          transform: scale(1.25)
+          position: relative
+          top: -5px
+
+
+
 
 @media screen and (max-width: 470px)
   .buy
@@ -404,6 +447,30 @@
   .buy
     &__row
       margin: 0
+
+@media screen and (max-width: 366px)
+  .auto
+    &__buy
+      margin: -192px auto 121px auto
+      transform: scale(0.38) translateX(-132%)
+  .youtube
+    &__foot
+      margin-top: 430px
+    &__foot-links-item:not(:last-child)
+      margin: 0 15px 0 0
+    &__foot-row
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      justify-items: center
+      gap: 10px
+    &__foot-item-fav
+      grid-column: 1/3
+    &__foot-item-facebook
+      justify-self: right
+    &__foot-item-insta
+      justify-self: left
+
 
 
 @media screen and (max-width: 360px)
