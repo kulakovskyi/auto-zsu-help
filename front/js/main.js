@@ -8,6 +8,16 @@ btn.onmouseout = function (e){
     image.classList.remove('sprint')
 }
 
+//тут перемещаем стрелочки влево, когда процент больше 88
+const secondProgress = document.querySelector('.buy__info-progress .myProgress')
+const arrowsProgress = document.querySelector('.buy__info-progress .myProgress .arrow-right')
+let computedStyleProgress = getComputedStyle(secondProgress);
+let progressPercent = computedStyleProgress.width;
+console.log(progressPercent);
+if(progressPercent >= '535.031px'){
+    arrowsProgress.classList.add('_bigPercent')
+} else { arrowsProgress.classList.remove('_bigPercent') }
+
 
 // Slider
 
