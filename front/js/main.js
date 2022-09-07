@@ -1,14 +1,11 @@
 //button
 const btn = document.querySelector('.buy__button');
-const image = document.querySelector('.border')
+const image = document.querySelector('.blick')
 btn.onmouseover = function (e){
     image.classList.add('sprint')
 
 }
 
-btn.addEventListener('click', ()=>{
-    console.log('click')
-})
 btn.onmouseout = function (e){
     image.classList.remove('sprint')
 }

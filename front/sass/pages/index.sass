@@ -140,15 +140,31 @@ body
       background: url(../img/btn-top.svg) no-repeat 50% 0/contain
       z-index: -2
       transition: .3s ease
+  &__button
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      background: url(../img/btn-active.svg) no-repeat 50% 0/contain
+      top: 5px
+      left: 4px
+      width: 301px
+      height: 105px
+      opacity: 1
+      transition: opacity .3s ease
+  &__button:hover::after
+    opacity: 1
   &__button:hover .auto__link::before
     top: 5px
     left: 5px
   &__button:hover .auto__link::after
-    background: url(../img/btn-active.svg) no-repeat 50% 0/contain
+    //background: url(../img/btn-active.svg) no-repeat 50% 0/contain
     top: 5px
     left: 4px
     width: 301px
     height: 105px
+    opacity: 0
+
   &__left
     position: absolute
     left: 50px
@@ -350,17 +366,29 @@ body
       background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
       z-index: -2
       transition: .3s ease
+  &__button
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+      top: 2px
+      left: 2px
+      width: 360px
+      height: 118px
+      opacity: 1
+      transition: opacity .3s ease
+  &__button:hover::after
+    opacity: 1
   &__button:hover .game__link::before
-    top: 2px
-    left: 2px
+    transform: translate(2px , 2px)
   &__button:hover .game__link::after
-    background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+    //background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
     top: 2px
     left: 2px
     width: 360px
     height: 118px
-    //transform-origin: bottom right
-    //transform: scaleX(0.98) scaleY(0.95)
+    opacity: 0
   &__button
     margin: 0 auto
     display: inline-block
@@ -516,6 +544,15 @@ body
         background: url("../img/blick-car.svg") no-repeat 50% 0/cover
         left: 40px
         top: -21px
+      .blick
+        content: ''
+        position: absolute
+        width: 98%
+        height: 103%
+        background: url("../img/blick-car-2.svg") no-repeat 50% 0/cover
+        left: 40px
+        top: -21px
+        opacity: 0
         animation: auto-blick 1.5s infinite
         &.sprint
           animation: auto-blick 0.5s infinite
@@ -556,15 +593,29 @@ body
       background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
       z-index: -2
       transition: .3s ease
+  &__button
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+      top: 2px
+      left: 2px
+      width: 360px
+      height: 118px
+      opacity: 1
+      transition: opacity .3s ease
+  &__button:hover::after
+    opacity: 1
   &__button:hover .buy__link::before
-    top: 2px
-    left: 2px
+    transform: translate(2px , 2px)
   &__button:hover .buy__link::after
-    background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+    //background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
     top: 2px
     left: 2px
     width: 360px
     height: 118px
+    opacity: 0
 
   &__button
     margin: 0 auto
@@ -811,15 +862,29 @@ body
             background: url(../img/btn-top-2.svg) no-repeat 50% 0/contain
             z-index: -2
             transition: .3s ease
+        &__button
+          position: relative
+          &::after
+            content: ''
+            position: absolute
+            background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+            top: 2px
+            left: 2px
+            width: 337px
+            height: 118px
+            opacity: 1
+            transition: opacity .3s ease
+        &__button:hover::after
+          opacity: 1
         &__button:hover .controls__link::before
-          top: 2px
-          left: 2px
+          transform: translate(2px , 2px)
         &__button:hover .controls__link::after
-          background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
+          //background: url(../img/btn-active-2.svg) no-repeat 50% 0/contain
           top: 2px
           left: 2px
-          width: 337px
+          width: 339px
           height: 118px
+          opacity: 0
         &__button
           margin: 0 auto
           max-width: 400px
@@ -924,11 +989,11 @@ body
 
 @keyframes auto-blick
   0%
-    background: url("../img/blick-car.svg") no-repeat 50% 0/cover
+    opacity: 0
   50%
-    background: url("../img/blick-car-2.svg") no-repeat 50% 0/cover
+    opacity: 1
   100%
-    background: url("../img/blick-car.svg") no-repeat 50% 0/cover
+    opacity: 0
 
 .slider
   &.not-enough-elems
