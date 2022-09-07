@@ -151,6 +151,7 @@
       font-size: 64px
       line-height: 84px
       margin-bottom: 37px
+      -webkit-text-stroke-width: 1.5px
     &__text
       font-size: 32px
       line-height: 46px
@@ -166,6 +167,7 @@
       line-height: 63px
       margin: 0 0 35px 0
       text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
+      -webkit-text-stroke-width: 1.5px
     &__row
       display: grid
       grid-template-columns: 1fr 1fr
@@ -211,6 +213,7 @@
       font-size: 48px
       line-height: 63px
       margin: 0 0 28px 0
+      -webkit-text-stroke-width: 1.5px
       text-shadow: 4px 3px 0px $magenta, 5px 8px 0px $blue
 
 
@@ -290,6 +293,7 @@
       line-height: 48px
       margin: 0 0 30px 0
       text-shadow: 2px 3px 0px $magenta, 3px 6px 0px $blue
+      -webkit-text-stroke-width: 1px
     &__text
       font-size: 24px
       line-height: 36px
@@ -307,6 +311,7 @@
       font-size: 34px
       line-height: 45px
       text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
+      -webkit-text-stroke-width: 1px
     &__row
       gap: 30px
       grid-template-rows: calc(50% - 55px) calc(50% - 55px)
@@ -352,10 +357,11 @@
       position: absolute
       left: 50%
       bottom: 45px
-      z-index: 6
+      z-index: 40
       transform: scale(0.6) translateX(-80%)
       transform-origin: center
-      margin: auto
+      //margin: auto
+
     &__info
       transform: scale(1)
       margin-left: -15px
@@ -402,6 +408,7 @@
       font-size: 34px
       line-height: 45px
       text-shadow: 4px 3px 0px $magenta, 5px 7px 0px $blue
+      -webkit-text-stroke-width: 1px
       max-width: 371px
       margin: 0 auto 13px auto
     &__info
