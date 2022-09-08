@@ -181,7 +181,7 @@
       transform-origin: left center
       transform: translateY(-70%) scale(0.85)
   .game
-    padding: 150px 0 98px 0
+    padding: 100px 0 74px 0
     &__arrow
       max-width: 61px
       top: -35px
@@ -320,6 +320,10 @@
       width: 100%
       height: 20px
       .myProgress
+        .arrow-right
+          transform-origin: left center
+          transform: translateY(-50%) skewX(30deg) scale(-0.6)
+          right: -140px
         .percetn
           font-size: 14px
           line-height: 18px
@@ -337,7 +341,7 @@
       -webkit-text-stroke-width: 1.2px
   .game
     position: relative
-    padding: 118px 0 101px 0
+    padding: 85px 0 64px 0
     &__container
       display: block
     &__title
@@ -388,7 +392,7 @@
     &__button
       position: absolute
       left: 50%
-      bottom: 45px
+      bottom: 16px
       z-index: 6
       transform: scale(0.6) translateX(-80%)
       transform-origin: center
@@ -468,6 +472,7 @@
 
 
 @media screen and (max-width: 500px)
+
   .auto
     &__buy
       margin: -168px auto 121px auto
@@ -519,6 +524,10 @@
 
 @media screen and (max-width: 366px)
   .auto
+    &__progress
+      .myProgress
+        .arrow-right
+          display: none
     &__buy
       margin: -192px auto 121px auto
       transform: scale(0.38) translateX(-132%)

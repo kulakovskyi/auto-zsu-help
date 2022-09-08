@@ -134,6 +134,7 @@ for(let i=0; i<autoMinNone.length; i++){
         }
         autoMinNone[8].classList.add('load');
         autoMinNone2[8].classList.add('load');
+
     }
     if(favPage.classList.contains('car9')){
         autoMinNone[0].classList.remove('load');
@@ -167,7 +168,11 @@ percent.forEach(item=>{
     if(favPage.classList.contains('car5')) item.innerHTML = '56%';
     if(favPage.classList.contains('car6')) item.innerHTML = '63%';
     if(favPage.classList.contains('car7')) item.innerHTML = '72%';
-    if(favPage.classList.contains('car8')) item.innerHTML = '84%';
+    if(favPage.classList.contains('car8')){
+        item.innerHTML = '84%';
+        const arrowsProgress = document.querySelector('.auto__progress .myProgress .arrow-right')
+        arrowsProgress.classList.add('_bigPercent');
+    }
     if(favPage.classList.contains('car9')) {
         item.innerHTML = '92%'
         //тут перемещаем стрелочки влево, когда процент больше 88

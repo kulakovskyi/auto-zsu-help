@@ -92,6 +92,28 @@ body
         left: 0
         top: 0
         border-radius: 6px 6px 6px 0
+      .arrow-right
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) skewX(30deg) scale(-1)
+        right: -100px
+        &._bigPercent
+          display: none
+          @media screen and (max-width: 600px)
+            right: -26px
+        span
+          display: block
+          width: 13px
+          height: 13px
+          border-bottom: 4px solid $grey
+          border-left: 4px solid $grey
+          margin: 0 8px 0 0
+          animation: arrow-left 1.5s infinite
+          float: left
+          &:nth-child(2)
+            animation-delay: -0.1s
+          &:nth-child(3)
+            animation-delay: -0.2s
       .percetn
         position: absolute
         right: -43px
@@ -237,7 +259,7 @@ body
 
 /*****************************GAME***************************/
 .game
-  padding: 244px 0 90px 0
+  padding: 244px 0 183px 0
   margin-top: -90px
   position: relative
   background: url('../img/bg-game-desc.svg') no-repeat 50% 0/cover
@@ -446,7 +468,7 @@ body
 
 .buy
   margin-top: -80px
-  padding: 40px 0 70px 0
+  padding: 62px 0 70px 0
   background: url('../img/bg-buy-desc.jpg') no-repeat 50% 0/cover
   @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 550px)
     background: url('../img/bg-buy-desc.jpg') no-repeat 50% 0/cover
@@ -1111,8 +1133,6 @@ body
     &-progress
       .myProgress
         width: 100%
-
-
 
 
 @keyframes arrow-left
