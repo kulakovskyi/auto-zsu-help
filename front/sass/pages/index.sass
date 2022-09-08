@@ -79,7 +79,7 @@ body
       border-radius: 6px
       background: #05C489
       height: 100%
-      width: 44%
+      width: 12%
       position: relative
       &::before
         content: ''
@@ -170,28 +170,34 @@ body
     left: 50px
     top: 50%
     transform: translateY(-50%)
-    &-done
-      width: 128px
-      height: 58px
-      background: url("../img/min-car-1.png") no-repeat 50% 0/contain
-      margin: 0 0 17px 0
-    &-load
-      width: 113px
-      height: 58px
-      background: url("../img/min-car-2.png") no-repeat 50% 0/contain
-      position: relative
-      margin: 0 0 17px 0
-      img
-        position: absolute
-        top: 5px
-        right: 2px
-        transform-origin: top left
-        animation: key 1.5s infinite
+
     &-none
       width: 92px
       height: 62px
       background: url("../img/min-car-3.png") no-repeat 50% 0/contain
       margin: 0 0 17px 0
+      &.done
+        width: 128px
+        height: 58px
+        background: url("../img/min-car-1.png") no-repeat 50% 0/contain
+        margin: 0 0 17px -9px
+      &.load
+        width: 113px
+        height: 58px
+        background: url("../img/min-car-2.png") no-repeat 50% 0/contain
+        position: relative
+        margin: 0 0 17px -5px
+        &::before
+          content: ''
+          background: url('../img/min-key.svg') no-repeat 50% 0/contain
+          width: 85px
+          height: 59px
+          position: absolute
+          top: 5px
+          right: 2px
+          transform-origin: top left
+          animation: key 1.5s infinite
+
   &__right
     position: absolute
     right: 50px
@@ -202,6 +208,27 @@ body
       height: 62px
       background: url("../img/min-car-3.png") no-repeat 50% 0/contain
       margin: 0 0 17px 0
+      &.done
+        width: 128px
+        height: 58px
+        background: url("../img/min-car-1.png") no-repeat 50% 0/contain
+        margin: 0 0 17px -5px
+      &.load
+        width: 113px
+        height: 58px
+        background: url("../img/min-car-2.png") no-repeat 50% 0/contain
+        position: relative
+        margin: 0 0 17px -5px
+        &::before
+          content: ''
+          background: url('../img/min-key.svg') no-repeat 50% 0/contain
+          width: 85px
+          height: 59px
+          position: absolute
+          top: 5px
+          right: 2px
+          transform-origin: top left
+          animation: key 1.5s infinite
 
 
 /*****************************GAME***************************/
@@ -243,6 +270,8 @@ body
     -webkit-text-stroke-width: 2px
     -webkit-text-stroke-color: $blue
     text-shadow: 5px 4px 0px $magenta, 8px 11px 0px $blue
+    position: relative
+    //text-shadow: -0 -2px 0 $blue, 0 -2px 0 $blue, -0 2px 0 $blue, 0    2px 0   $blue, -2px -0   0   $blue, 2px -0   0   $blue, -2px  0   0   $blue, 2px  0   0   $blue, -1px -2px 0   $blue, 1px -2px 0   $blue, -1px  2px 0   $blue, 1px  2px 0   $blue, -2px -1px 0   $blue, 2px -1px 0   $blue, -2px  1px 0   $blue, 2px  1px 0   $blue, -2px -2px 0   $blue, 2px -2px 0   $blue, -2px  2px 0   $blue, 2px  2px 0   $blue, -2px -2px 0   $blue, 2px -2px 0   $blue, -2px  2px 0   $blue, 2px  2px 0   $blue, 5px 4px 0px $magenta, 8px 11px 0px $blue
     margin: 0 0 70px 0
   &__text
     font-family: $font-suisse-med
@@ -423,7 +452,7 @@ body
     background: url("../img/bg-buy-mob.jpg") no-repeat 50% 0/cover
 
   &__container
-    max-width: 1170px
+    max-width: 1600px
     padding: 0 15px
     margin: 0 auto
     display: flex
@@ -460,7 +489,7 @@ body
         border-radius: 6px 0 0 6px
         background: #05C489
         height: 100%
-        width: 44%
+        width: 12%
         position: relative
         &::before
           content: ''
@@ -471,6 +500,10 @@ body
           left: 0
           top: 0
           border-radius: 6px 0 0 0
+        &._bigPercent
+          border-radius: 6px
+          &::before
+            border-radius: 6px 6px 0 0
       .arrow-right
           position: absolute
           top: 50%
@@ -478,6 +511,8 @@ body
           right: -50px
           &._bigPercent
             right: 26px
+            @media screen and (max-width: 600px)
+              right: -26px
           span
             display: block
             width: 13px
@@ -506,23 +541,6 @@ body
     align-items: center
     margin: 0 0 100px 0
   &__item
-    &-done
-      width: 128px
-      height: 58px
-      background: url("../img/min-car-1.png") no-repeat 50% 0/contain
-      margin: 0 17px 0 0
-    &-load
-      width: 113px
-      height: 58px
-      background: url("../img/min-car-2.png") no-repeat 50% 0/contain
-      position: relative
-      margin: 0 17px 0 0
-      img
-        position: absolute
-        top: 5px
-        right: 2px
-        transform-origin: top left
-        animation: key 1.5s infinite
     &-none
       width: 92px
       height: 62px
@@ -530,6 +548,28 @@ body
       margin: 0 17px 0 0
       &:last-child
         margin: 0
+      &.done
+        width: 128px
+        height: 58px
+        background: url("../img/min-car-1.png") no-repeat 50% 0/contain
+        margin: 0 17px 0 0
+      &.load
+        width: 113px
+        height: 58px
+        background: url("../img/min-car-2.png") no-repeat 50% 0/contain
+        position: relative
+        margin: 0 17px 0 0
+        &::before
+          content: ''
+          background: url('../img/min-key.svg') no-repeat 50% 0/contain
+          width: 85px
+          height: 59px
+          position: absolute
+          top: 5px
+          right: 2px
+          transform-origin: top left
+          animation: key 1.5s infinite
+
   &__image
     display: flex
     justify-content: center
@@ -949,6 +989,116 @@ body
       .arrow-disabled
         cursor: default
         pointer-events: none
+
+
+
+/*****************************PROGRESS***************************/
+
+.fav__page.car1
+  .auto
+    &__progress
+      .myProgress
+        width: 14%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 14%
+
+.fav__page.car2
+  .auto
+    &__progress
+      .myProgress
+        width: 20%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 20%
+
+.fav__page.car3
+  .auto
+    &__progress
+      .myProgress
+        width: 30%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 30%
+
+.fav__page.car4
+  .auto
+    &__progress
+      .myProgress
+        width: 40%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 40%
+
+
+.fav__page.car5
+  .auto
+    &__progress
+      .myProgress
+        width: 50%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 50%
+
+
+.fav__page.car6
+  .auto
+    &__progress
+      .myProgress
+        width: 60%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 60%
+
+
+.fav__page.car7
+  .auto
+    &__progress
+      .myProgress
+        width: 70%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 70%
+
+
+.fav__page.car8
+  .auto
+    &__progress
+      .myProgress
+        width: 80%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 80%
+
+
+.fav__page.car9
+  .auto
+    &__progress
+      .myProgress
+        width: 90%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 90%
+
+
+.fav__page.car10
+  .auto
+    &__progress
+      .myProgress
+        width: 97%
+  .buy__info
+    &-progress
+      .myProgress
+        width: 100%
 
 
 

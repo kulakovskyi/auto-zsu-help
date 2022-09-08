@@ -19,24 +19,35 @@
         margin: 0 auto
     &__left
       transform: translateY(-80%)
-      &-done
-        max-width: 93px
-        margin: 0 0 10px 0
-      &-load
-        max-width: 75px
-        margin: 0 0 10px 0
-        img
-          max-width: 60px
       &-none
         width: 76px
         height: 46px
         margin: 0 0 20px 0
+        &.load
+          max-width: 75px
+          margin: 0 0 10px 0
+          &::before
+            height: 50px
+            right: -10px
+        &.done
+          max-width: 97px
+          margin: 0 0 10px -8px
+
     &__right
       transform: translateY(-80%)
       &-none
         width: 76px
         height: 46px
         margin: 0 0 20px 0
+        &.load
+          max-width: 75px
+          margin: 0 0 10px 0
+          &::before
+            height: 50px
+            right: -10px
+        &.done
+          max-width: 93px
+          margin: 0 0 10px 0
     &__info
       position: relative
       flex-wrap: nowrap
@@ -68,8 +79,12 @@
     &__row
       margin-top: -30px
     &__item
-      &-load
-        width: 95px
+      &-none
+        &.load
+          width: 95px
+          &::before
+            height: 44px
+            right: -10px
   .youtube
     margin-top: -58px
 
@@ -90,6 +105,23 @@
     &__info
       transform-origin: center
       transform: scale(0.9)
+  .buy
+    &__item
+      &-none
+        width: 55px
+        height: 30px
+        margin: 0 10px 0 0
+        &.done
+          width: 66px
+          height: 30px
+          margin: 0 10px 0 0
+        &.load
+          width: 55px
+          height: 30px
+          margin: 0 10px 0 0
+          &::before
+            height: 34px
+            right: -18px
 
 @media screen and (max-width: 873px)
   .auto
@@ -204,19 +236,7 @@
           top: -11px
     &__row
       margin: -53px 0 75px 0
-    &__item
-      &-done
-        width: 66px
-        height: 30px
-        margin: 0 10px 0 0
-      &-load
-        width: 55px
-        height: 30px
-        margin: 0 10px 0 0
-      &-none
-        width: 55px
-        height: 30px
-        margin: 0 10px 0 0
+
   .youtube
     &__title
       font-size: 48px
@@ -237,6 +257,29 @@
     &__info
       transform-origin: center
       transform: scale(0.6)
+  .buy
+    &__row
+      margin: 0 0 40px 0
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+      justify-items: center
+      gap: 15px 25px
+    &__item
+      &-none
+        width: 95%
+        height: 60px
+        margin: 0
+        &.done
+          width: 120%
+          height: 60px
+          margin: 0
+        &.load
+          width: 95%
+          height: 60px
+          margin: 0
+          &::before
+            height: 57px
+            right: 2px
 
 @media screen and (max-width: 660px)
   .game
@@ -302,7 +345,7 @@
       line-height: 48px
       margin: 0 0 30px 0
       text-shadow: 2px 3px 0px $magenta, 3px 6px 0px $blue
-      -webkit-text-stroke-width: 1px
+      -webkit-text-stroke-width: 1.5px
     &__text
       font-size: 24px
       line-height: 36px
@@ -357,6 +400,12 @@
     padding: 87px 0 130px 0
     position: relative
     z-index: -1
+    &__item
+      &-none
+        &.load
+          &::before
+            height: 44px
+            right: -4px
     &__image
       &-wrap
         .border
@@ -398,21 +447,7 @@
         font-size: 15px
         line-height: 20px
         -webkit-text-stroke-width: 1.5px
-    &__row
-      margin: 0 0 40px 0
-      display: grid
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr
-      justify-items: center
-      gap: 0 13px
-    &__item
-      &-done,
-      &-load,
-      &-none
-        width: 100%
-        height: 60px
-        margin: 0
-      &-done
-        width: 132%
+
   .youtube
     margin-top: -39px
     padding: 52px 0 35px 0
@@ -453,6 +488,13 @@
           transform: scale(1.25)
           position: relative
           top: -5px
+  .buy
+    &__item
+      &-none
+        &.load
+          &::before
+            height: 36px
+            right: -16px
 
 
 
@@ -464,8 +506,15 @@
 
 @media screen and (max-width: 415px)
   .buy
+    &__item
+      &-none
+        &.load
+          &::before
+            height: 27px
+            right: -14px
     &__row
       margin: 0
+      gap: 0px 15px
 
 @media screen and (max-width: 366px)
   .auto
@@ -509,6 +558,13 @@
       &-text
         font-size: 14px
         line-height: 23px
+  .buy
+    &__item
+      &-none
+        &.load
+          &::before
+            height: 27px
+            right: -23px
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
   .buy
